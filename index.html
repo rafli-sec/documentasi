@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>🚀 API Documentation</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#authentication">Authentication</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#home">Home</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2></h2>
+        <a href="https://backend-dot-sylvan-replica-443303-m9.et.r.appspot.com/"
+          >https://backend-dot-sylvan-replica-443303-m9.et.r.appspot.com/</a
+        >
+      </section>
+
+      <section id="authentication">
+        <h2>🔑 Authentication</h2>
+        <h3>Login</h3>
+        <p><strong>Endpoint:</strong> POST /api/auth/login</p>
+        <pre><code>{
+  "email": "user@example.com",
+  "password": "password123"
+}</code></pre>
+        <h3>Response (200 OK)</h3>
+        <pre><code>{
+  "error": false,
+  "message": "Login successful",
+  "token": "JWT_TOKEN_HERE"
+}</code></pre>
+
+        <h3>Register</h3>
+        <p><strong>Endpoint:</strong> POST /api/auth/register</p>
+        <pre><code>{
+  "name": "John Doe",
+  "email": "user@example.com",
+  "password": "password123",
+  "age": 25,
+  "gender": "Laki-laki"
+}</code></pre>
+        <h3>Response (201 Created)</h3>
+        <pre><code>{
+  "error": false,
+  "message": "User registered successfully"
+}</code></pre>
+      </section>
+
+      <section id="profile">
+        <h2>👤 Profile</h2>
+        <h3>Get Profile</h3>
+        <p><strong>Endpoint:</strong> GET /profile</p>
+        <h3>Headers</h3>
+        <pre><code>{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsIm5hbWUiOiJyYWZsaWRpZ2EiLCJpYXQiOjE3MzM2MjkyMzQsImV4cCI6MTczMzcxNTYzNH0.aKwIo5_mrU4ZPkav86BJa2TcEN76vMxZzUTPx0iQVTg
+"
+}</code></pre>
+        <h3>Response</h3>
+        <pre><code>{
+  "error": false,
+  "data": {
+    "name": "John Doe",
+    "email": "user@example.com",
+    "age": 25,
+    "gender": "Laki-laki"
+  }
+}</code></pre>
+
+        <h3>Update Profile</h3>
+        <p><strong>Endpoint:</strong> PUT /profile/profile</p>
+        <h3>Request Body</h3>
+        <pre><code>{
+  "age": 26,
+  "gender": "Perempuan"
+}</code></pre>
+      </section>
+
+      <section id="home">
+        <h2>🏠 Home</h2>
+        <h3>Home Page</h3>
+        <p><strong>Endpoint:</strong> GET /home</p>
+        <h3>Response</h3>
+        <pre><code>{
+  "currentDate": " Minggu, 8 Desember 2024",
+  "currentTime": " 05.57.19"
+}</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 - API Documentation</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
